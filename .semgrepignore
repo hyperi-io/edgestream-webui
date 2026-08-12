@@ -1,0 +1,5 @@
+# Ignore third party bundled dependencies
+**/google-protobuf.js
+
+# Ignore generated folder
+src/generated/vector/

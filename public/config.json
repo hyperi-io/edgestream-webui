@@ -1,0 +1,11 @@
+{
+  "VITE_APP_REST_API_URL": "/api/v1/",
+  "VITE_APP_WS_API_URL": "/api/v1/",
+  "VITE_APP_GRAPHQL_API_URL": "/graphql/",
+  "VITE_APP_GRAPHQL_WS_URL": "/graphql/",
+  "VITE_APP_GRAPHQL_WSS": true,
+  "VITE_APP_ENABLE_AUTH0": false,
+  "VITE_APP_AUTH0_CLIENT_ID":"",
+  "VITE_APP_AUTH0_CLIENT_DOMAIN":"auth0.com",
+  "VITE_APP_AUTH0_AUDIENCE":"https://auth0.com/api/v2/"
+}

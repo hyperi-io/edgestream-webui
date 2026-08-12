@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# "edgestream-webui" postinst script
+#
+set -e
+
+rm -rf /etc/nginx/sites-enabled/default
+cp -f /opt/edgestream-webui/share/edgestream-webui /etc/nginx/sites-available/edgestream-webui
+ln -sf /etc/nginx/sites-available/edgestream-webui /etc/nginx/sites-enabled/edgestream-webui
+
+exit 0

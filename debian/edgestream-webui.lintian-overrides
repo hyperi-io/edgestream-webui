@@ -1,0 +1,4 @@
+# License is Functional Source License 1.1 (ALv2 Future License)
+# This is intentional and expected for a vendor-supplied Debian package.
+edgestream-webui: non-free-license
+edgestream-webui: license-problem-non-free-fsl

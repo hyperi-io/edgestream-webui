@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" role="img" aria-label="EdgeStream Hub logon logo aligned">
+  <defs>
+    <style>
+      .brand {
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+    </style>
+
+    <!-- Binary text pattern -->
+    <pattern id="binText" patternUnits="userSpaceOnUse" width="160" height="120">
+      <text x="0" y="44" class="mono" font-size="44" fill="#FFFFFF" opacity="0.18" letter-spacing="6">
+        01001101011001
+      </text>
+      <text x="16" y="96" class="mono" font-size="44" fill="#FFFFFF" opacity="0.18" letter-spacing="6">
+        10100110100110
+      </text>
+    </pattern>
+
+    <!-- Clip for rounded square -->
+    <clipPath id="clipBox">
+      <rect x="180" y="80" width="540" height="540" rx="56"></rect>
+    </clipPath>
+  </defs>
+
+  <!-- ICON -->
+  <rect x="180" y="80" width="540" height="540" rx="56" fill="#0B4FB3"></rect>
+  <g clip-path="url(#clipBox)">
+    <rect x="180" y="80" width="540" height="540" fill="url(#binText)"></rect>
+  </g>
+
+  <!-- Edge cut -->
+  <path d="M560 80 L720 80 L720 240 Z" fill="#FFFFFF"></path>
+  <!-- Cut echo -->
+  <path d="M540 80 L720 260 L720 300 L360 80 Z" fill="#FFFFFF" opacity="0.14"></path>
+
+  <!-- WORDMARK (single line, slightly more vertical gap) -->
+  <text x="450" y="724" text-anchor="middle" class="brand" font-size="96">
+    <tspan fill="#0B4FB3">EDGESTREAM</tspan>
+    <tspan fill="#2F2F2F"> HUB</tspan>
+  </text>
+</svg>

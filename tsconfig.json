@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    "jsx": "react-jsx",
+
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+
+    "types": ["react", "react-dom"],
+
+    "baseUrl": ".",
+    "paths": {
+      "app/*": ["src/app/*"],
+      "theme/*": ["src/theme/*"],
+      "features/*": ["src/features/*"],
+      "common/*": ["src/common/*"],
+      "assets/*": ["src/assets/*"],
+      "pages/*": ["src/pages/*"],
+      "service/*": ["src/service/*"],
+      "components/*": ["src/components/*"],
+      "global/*": ["src/global/*"],
+      "generated/*": ["src/generated/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

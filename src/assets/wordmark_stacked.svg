@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 320" role="img" aria-label="EdgeStream Hub wordmark">
+  <style>
+    .brand { font-family: Inter, "Segoe UI", Arial, sans-serif; font-weight: 700; letter-spacing: 1.5px; }
+  </style>
+  <text x="490" y="135" text-anchor="middle" class="brand" font-size="96" fill="#0B4FB3">EDGESTREAM</text>
+  <text x="490" y="255" text-anchor="middle" class="brand" font-size="96" fill="#2F2F2F">HUB</text>
+</svg>

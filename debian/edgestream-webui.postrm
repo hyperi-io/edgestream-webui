@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# "edgestream-webui" postrm script
+#
+set -e
+
+rm -f /etc/nginx/sites-enabled/edgestream-webui
+rm -f /etc/nginx/sites-available/edgestream-webui
+
+exit 0

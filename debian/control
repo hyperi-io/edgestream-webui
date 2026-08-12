@@ -1,0 +1,21 @@
+Source: edgestream-webui
+Section: web
+Priority: optional
+Standards-Version: 4.6.2
+Maintainer: Hyperi Support <edgstream-support@hyperi.io>
+Build-Depends: debhelper-compat (= 13), make
+Homepage: https://github.com/hyperi-io/edgstream-webui
+
+Package: edgestream-webui
+Architecture: all
+Pre-Depends:
+ dpkg (>= 1.16.1),
+ ${misc:Pre-Depends}
+Depends:
+ nginx,
+ ${misc:Depends}
+Description: Hypersec EdgeStream Hub Web UI
+ EdgeStream Hub is a network security and event collection appliance
+ providing event collection, filtering and aggregation.
+ .
+ Licensed under the Functional Source License 1.1 (ALv2 Future License).

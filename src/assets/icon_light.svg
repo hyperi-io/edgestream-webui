@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="EdgeStream Hub icon">
+  <defs>
+    <pattern id="binText" patternUnits="userSpaceOnUse" width="160" height="120">
+      <text x="0" y="44" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, monospace" font-size="44" fill="#FFFFFF" opacity="0.18" letter-spacing="6">01001101011001</text>
+      <text x="16" y="96" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, monospace" font-size="44" fill="#FFFFFF" opacity="0.18" letter-spacing="6">10100110100110</text>
+    </pattern>
+    <clipPath id="clipBox">
+      <rect x="40" y="40" width="280" height="280" rx="36"/>
+    </clipPath>
+  </defs>
+  <rect x="40" y="40" width="280" height="280" rx="36" fill="#0B4FB3"/>
+  <g clip-path="url(#clipBox)">
+    <rect x="40" y="40" width="280" height="280" fill="url(#binText)"/>
+  </g>
+  <path d="M240 40 L320 40 L320 120 Z" fill="#FFFFFF"/>
+  <path d="M228 40 L320 132 L320 168 L180 40 Z" fill="#FFFFFF" opacity="0.14"/>
+</svg>

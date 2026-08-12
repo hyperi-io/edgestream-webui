@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+# Optional: allow workflow to pass PNPM as an absolute path, but default to PATH lookup
+PNPM ?= $(shell command -v pnpm 2>/dev/null)
+
+%:
+	dh $@
+
+override_dh_usrlocal:
+	# no-op
+
+override_dh_strip_nondeterminism:
+	:
+
+override_dh_auto_build:
+	rm -rf .env
+	@if [ -z "$(PNPM)" ]; then echo "ERROR: pnpm not found"; exit 2; fi
+	"$(PNPM)" -v
+	"$(PNPM)" install --frozen-lockfile
+	"$(PNPM)" run build
+
+override_dh_auto_install:
+	mkdir -p $(CURDIR)/debian/edgestream-webui/opt/edgestream-webui
+	# Vite output is dist/
+	mv dist $(CURDIR)/debian/edgestream-webui/opt/edgestream-webui/html
+	mkdir -p $(CURDIR)/debian/edgestream-webui/opt/edgestream-webui/share
+	cp debian/contrib/edgestream-webui \
+		$(CURDIR)/debian/edgestream-webui/opt/edgestream-webui/share/.
+	rm -f $(CURDIR)/debian/edgestream-webui/opt/edgestream-webui/html/local-config.json
+
+override_dh_auto_clean:
+	rm -rf $(CURDIR)/dist $(CURDIR)/node_modules
+	rm -rf $(CURDIR)/.pnpm-store $(CURDIR)/.pnpm-debug.log
+	rm -rf $(CURDIR)/.vite
+	dh_clean
+
+configure:
+	# no-op
