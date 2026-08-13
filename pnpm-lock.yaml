@@ -40,7 +40,7 @@ importers:
         version: 0.99.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@react-querybuilder/mantine':
         specifier: 8.22.1
-        version: 8.22.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.22.1(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
+        version: 8.22.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.22.2(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
       '@reduxjs/toolkit':
         specifier: ^2.12.0
         version: 2.12.0(react-redux@9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
@@ -102,8 +102,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.8)
       react-querybuilder:
-        specifier: 8.22.1
-        version: 8.22.1(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
+        specifier: 8.22.2
+        version: 8.22.2(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
       react-redux:
         specifier: ^9.3.0
         version: 9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
@@ -896,8 +896,8 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@react-querybuilder/core@8.22.4':
-    resolution: {integrity: sha512-Av4Eoa31JBsR3HwfAVwqGT2pepRB+En4GMR1ua7umBgMrvyP18uQlvIoV1zhR7WhQ6M8zsPhy6Bybbw1Dt93rg==}
+  '@react-querybuilder/core@8.22.5':
+    resolution: {integrity: sha512-ZagsuGcKigrNPM/jPS3k1Ly/LYIHdW13Np2atz4C4Id24AON09nlQp9yb9ZyxbgAAPk7uaXC1TlRq01Q+2sa1A==}
     peerDependencies:
       '@tanstack/db': '>=0.6.9'
       '@traqula/parser-sparql-1-2': '>=0.1.0'
@@ -1259,6 +1259,9 @@ packages:
 
   '@types/js-cookie@3.0.6':
     resolution: {integrity: sha512-wkw9yd1kEXOPnvEeEV1Go1MmxtBJL0RR79aOTAApecWFVu7w0NNXNqhcWgvw2YgZDYadliXkl14pa3WXw5jlCQ==}
+
+  '@types/json-logic-js@2.0.8':
+    resolution: {integrity: sha512-WgNsDPuTPKYXl0Jh0IfoCoJoAGGYZt5qzpmjuLSEg7r0cKp/kWtWp0HAsVepyPSPyXiHo6uXp/B/kW/2J1fa2Q==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -2538,8 +2541,8 @@ packages:
   immer@11.1.11:
     resolution: {integrity: sha512-qzXuyXAkPySAGYkfsAwodDPWT8Zm7/Uo5BNt4BjhMhG5WlWyZZ4wQqnWwdS8kjlQ1Cwu6gjw3A6+0gTQwlyYtw==}
 
-  immer@11.1.15:
-    resolution: {integrity: sha512-VrNANlmnWQnh5COXIIOQXM9oOJw7naGKlBT74ZOOR6lpVXc3gFEu9FJLDFcpCJ2j+NWr8TIwtWD//T6ZX6TKiQ==}
+  immer@11.1.16:
+    resolution: {integrity: sha512-Xs7H9rBc+kti1J6RueUvbEBkmOz7jqj11XYgf+YMXAYzu8EeE7hwZ9poLXdVfVnGmJu7QAf41T7H2KuF6QoK6Q==}
 
   immutable@3.8.3:
     resolution: {integrity: sha512-AUY/VyX0E5XlibOmWt10uabJzam1zlYjwiEgQSDc5+UIkFNaF9WM0JxXKaNMGf+F/ffUF+7kRKXM9A7C0xXqMg==}
@@ -3343,8 +3346,8 @@ packages:
     peerDependencies:
       react: '*'
 
-  react-querybuilder@8.22.1:
-    resolution: {integrity: sha512-HJPNbAcXYvngw+Ytq8+K6L61cMXT8knr4Q5KiSxzI+lmjwRc3cbDjqTDg+EhmIKT/XcaeNh3/k1u1qf/AowEOg==}
+  react-querybuilder@8.22.2:
+    resolution: {integrity: sha512-F+3GInfvh3/1LgfQjyZbSM834kWoop6fldp6uF7gbej/ulZpsUjmpRa3jWBmDtrveWSDIi3uY9NattFaBe/kpA==}
     peerDependencies:
       react: '>=18'
 
@@ -4892,21 +4895,22 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@react-querybuilder/core@8.22.4':
+  '@react-querybuilder/core@8.22.5':
     dependencies:
       '@ts-jison/lexer': 0.4.1-alpha.1
       '@ts-jison/parser': 0.4.1-alpha.1
-      immer: 11.1.15
+      '@types/json-logic-js': 2.0.8
+      immer: 11.1.16
       numeric-quantity: 3.2.2
 
-  '@react-querybuilder/mantine@8.22.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.22.1(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)':
+  '@react-querybuilder/mantine@8.22.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.22.2(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)':
     dependencies:
       '@mantine/core': 9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@mantine/dates': 9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@mantine/hooks': 9.5.1(react@19.2.8)
       dayjs: 1.11.21
       react: 19.2.8
-      react-querybuilder: 8.22.1(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
+      react-querybuilder: 8.22.2(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
 
   '@react-spring/animated@10.1.2(react@19.2.8)':
     dependencies:
@@ -5170,6 +5174,8 @@ snapshots:
       '@types/unist': 3.0.3
 
   '@types/js-cookie@3.0.6': {}
+
+  '@types/json-logic-js@2.0.8': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -6542,7 +6548,7 @@ snapshots:
 
   immer@11.1.11: {}
 
-  immer@11.1.15: {}
+  immer@11.1.16: {}
 
   immutable@3.8.3: {}
 
@@ -7307,9 +7313,9 @@ snapshots:
       qrcode-generator: 2.0.4
       react: 19.2.8
 
-  react-querybuilder@8.22.1(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1):
+  react-querybuilder@8.22.2(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1):
     dependencies:
-      '@react-querybuilder/core': 8.22.4
+      '@react-querybuilder/core': 8.22.5
       '@reduxjs/toolkit': 2.12.0(react-redux@9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
       react: 19.2.8
       react-redux: 9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
