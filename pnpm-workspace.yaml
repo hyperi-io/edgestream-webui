@@ -3,3 +3,5 @@ allowBuilds:
   unrs-resolver: false
 minimumReleaseAgeExclude:
   - react-qr-code@2.2.0
+overrides:
+  immutable: "^5.1.9"
