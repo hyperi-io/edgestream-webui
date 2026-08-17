@@ -90,7 +90,7 @@
     "graphql": "^17.0.2",
     "jsdom": "^30.0.1",
     "knip": "^6.32.2",
-    "postcss": "^8.5.26",
+    "postcss": "^8.5.19",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "rollup-plugin-visualizer": "^7.1.1",
