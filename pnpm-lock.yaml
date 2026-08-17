@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  immutable: ^5.1.9
+
 importers:
 
   .:
@@ -2533,10 +2536,6 @@ packages:
 
   immer@11.1.17:
     resolution: {integrity: sha512-8Vu44Y0MuMBlTQz/jQ8HEMYNq/bBqk87MnBwYR5mC8AthfhEXidZ5aT/oA/CUqboa8THKltnD9L3xyqhU/Sy1Q==}
-
-  immutable@3.8.4:
-    resolution: {integrity: sha512-ZQv17KolYrYmsDoDB8N67zhIKsNi9mGYlk96y/yuxyAqJB2hLzSGSM7k/sB0/ZvO4kx27U9+fBeD/XlLGh/uXQ==}
-    engines: {node: '>=0.10.0'}
 
   immutable@5.1.9:
     resolution: {integrity: sha512-m8nVez3rwrgmWxtLMt1ZYXB2Lv7OKYn/disyxAlSDYAlKSlFoPPfIAmAM/M5xqL4m4C/wAPw7S2/CNaUii1Hxg==}
@@ -6539,8 +6538,6 @@ snapshots:
 
   immer@11.1.17: {}
 
-  immutable@3.8.4: {}
-
   immutable@5.1.9: {}
 
   import-fresh@3.3.1:
@@ -7274,7 +7271,7 @@ snapshots:
     dependencies:
       '@mattiasbuelens/web-streams-polyfill': 0.2.1
       fetch-readablestream: 0.2.0
-      immutable: 3.8.4
+      immutable: 5.1.9
       mitt: 1.2.0
       prop-types: 15.8.1
       react: 19.2.8
