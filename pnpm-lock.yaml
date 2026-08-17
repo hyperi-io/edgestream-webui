@@ -196,7 +196,7 @@ importers:
         specifier: ^6.32.0
         version: 6.32.0
       postcss:
-        specifier: ^8.5.26
+        specifier: ^8.5.19
         version: 8.5.26
       prettier:
         specifier: ^3.9.6
