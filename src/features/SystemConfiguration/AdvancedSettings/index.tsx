@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { ActionIcon, Box, Button, Group, LoadingOverlay, Text, TextInput, Tooltip } from '@mantine/core';
-import { IconRefresh, IconSearch, IconX, IconDeviceFloppy, IconRestore, IconEraser } from '@tabler/icons-react';
+import { IconRefresh, IconSearch, IconDeviceFloppy, IconRestore } from '@tabler/icons-react';
 import { DataTable } from 'mantine-datatable';
 import { useEffectOnce, useUpdateEffect } from 'react-use';
 import { useNotification } from 'common/useNotifications';
@@ -45,16 +45,24 @@ const AdvancedSettings: React.FC = () => {
     }
   };
 
-  useEffectOnce(() => { fetchAdvancedSettings(); });
+  useEffectOnce(() => {
+    fetchAdvancedSettings();
+  });
 
   useUpdateEffect(() => {
-    if (rawData) setSettings(rawData);
+    if (Array.isArray(rawData)) {
+      // Filter out any null/undefined entries returned by API
+      setSettings(rawData.filter(Boolean));
+    }
   }, [rawData]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    if (!q) return settings;
-    return settings.filter(it => it.label.toLowerCase().includes(q) || (it.description || '').toLowerCase().includes(q));
+    const validSettings = (settings || []).filter(Boolean);
+    if (!q) return validSettings;
+    return validSettings.filter(
+      it => (it.label || '').toLowerCase().includes(q) || (it.description || '').toLowerCase().includes(q)
+    );
   }, [settings, search]);
 
   return (
@@ -99,16 +107,20 @@ const AdvancedSettings: React.FC = () => {
               <Group wrap="nowrap" gap="xs">
                 <TextInput
                   value={String(record.value ?? '')}
-                  onChange={(e) => setSettings(prev => prev.map(it => it.id === record.id ? { ...it, value: e.currentTarget.value } : it))}
+                  onChange={(e) => {
+                    const newVal = e.currentTarget.value;
+                    setSettings(prev => prev.map(it => (it && it.id === record.id ? { ...it, value: newVal } : it)));
+                  }}
                   style={{ flex: 1 }}
                 />
-                <ActionIcon
-                  variant="subtle"
-                  onClick={() => setSettings(prev => prev.map(it => it.id === record.id ? { ...it, value: record.default_value } : it))}
-                  tooltip="Reset to default"
-                >
-                  <IconRestore size={16} />
-                </ActionIcon>
+                <Tooltip label="Reset to default">
+                  <ActionIcon
+                    variant="subtle"
+                    onClick={() => setSettings(prev => prev.map(it => (it && it.id === record.id ? { ...it, value: record.default_value } : it)))}
+                  >
+                    <IconRestore size={16} />
+                  </ActionIcon>
+                </Tooltip>
               </Group>
             ),
           },
