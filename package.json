@@ -57,7 +57,7 @@
     "react-dom": "^19.2.8",
     "react-lazylog": "^4.5.3",
     "react-qr-code": "^2.2.0",
-    "react-querybuilder": "8.22.5",
+    "react-querybuilder": "8.23.0",
     "react-redux": "^9.3.0",
     "react-router-dom": "^7.18.2",
     "react-use": "^17.6.1",

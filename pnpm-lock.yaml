@@ -43,7 +43,7 @@ importers:
         version: 0.99.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@react-querybuilder/mantine':
         specifier: 8.22.4
-        version: 8.22.4(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.22.5(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
+        version: 8.22.4(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.23.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
       '@reduxjs/toolkit':
         specifier: ^2.12.0
         version: 2.12.0(react-redux@9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
@@ -105,8 +105,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.8)
       react-querybuilder:
-        specifier: 8.22.5
-        version: 8.22.5(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
+        specifier: 8.23.0
+        version: 8.23.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
       react-redux:
         specifier: ^9.3.0
         version: 9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
@@ -888,8 +888,8 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@react-querybuilder/core@8.22.5':
-    resolution: {integrity: sha512-ZagsuGcKigrNPM/jPS3k1Ly/LYIHdW13Np2atz4C4Id24AON09nlQp9yb9ZyxbgAAPk7uaXC1TlRq01Q+2sa1A==}
+  '@react-querybuilder/core@8.23.0':
+    resolution: {integrity: sha512-5EHBNwC31K0E4LJE2vea7s7bHnlRnYShH3ceSF4ZMcW5pnfcByfJA6JHymT1bh67l+n7iYq5n2gXtJuCZMLDSw==}
     peerDependencies:
       '@tanstack/db': '>=0.6.9'
       '@traqula/parser-sparql-1-2': '>=0.1.0'
@@ -2534,9 +2534,6 @@ packages:
     resolution: {integrity: sha512-BAg6QkE8W+TuQLrrw0Ugr7HegXduRuuj8/ti2kSOc+jz1dmx8/WNcjr6XGnq5YpDWxFwwaavqD0+jIUOKelTsw==}
     engines: {node: '>= 4'}
 
-  immer@11.1.16:
-    resolution: {integrity: sha512-Xs7H9rBc+kti1J6RueUvbEBkmOz7jqj11XYgf+YMXAYzu8EeE7hwZ9poLXdVfVnGmJu7QAf41T7H2KuF6QoK6Q==}
-
   immer@11.1.17:
     resolution: {integrity: sha512-8Vu44Y0MuMBlTQz/jQ8HEMYNq/bBqk87MnBwYR5mC8AthfhEXidZ5aT/oA/CUqboa8THKltnD9L3xyqhU/Sy1Q==}
 
@@ -3342,8 +3339,8 @@ packages:
     peerDependencies:
       react: '*'
 
-  react-querybuilder@8.22.5:
-    resolution: {integrity: sha512-UyLmmxB0fp9O54pexYW/fV3skQaQT7rW1wM3LzIEbnzStvXiCj8dEQDYqwOspwDajCOScYyFBVn6tMC05OpYTg==}
+  react-querybuilder@8.23.0:
+    resolution: {integrity: sha512-Pfa/16QVitajArvcJNgqnzqKoAj8lr0W/e7ubqCgLka1Tt9pkxSGQSjUkcKjxumpct8VsnAkKc2IFigAJCSbyg==}
     peerDependencies:
       react: '>=18'
 
@@ -4888,22 +4885,22 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@react-querybuilder/core@8.22.5':
+  '@react-querybuilder/core@8.23.0':
     dependencies:
       '@ts-jison/lexer': 0.4.1-alpha.1
       '@ts-jison/parser': 0.4.1-alpha.1
       '@types/json-logic-js': 2.0.8
-      immer: 11.1.16
+      immer: 11.1.17
       numeric-quantity: 3.2.2
 
-  '@react-querybuilder/mantine@8.22.4(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.22.5(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)':
+  '@react-querybuilder/mantine@8.22.4(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/dates@9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-querybuilder@8.23.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)':
     dependencies:
       '@mantine/core': 9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@mantine/dates': 9.5.1(@mantine/core@9.5.1(@mantine/hooks@9.5.1(react@19.2.8))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@mantine/hooks@9.5.1(react@19.2.8))(dayjs@1.11.21)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@mantine/hooks': 9.5.1(react@19.2.8)
       dayjs: 1.11.21
       react: 19.2.8
-      react-querybuilder: 8.22.5(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
+      react-querybuilder: 8.23.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
 
   '@react-spring/animated@10.1.2(react@19.2.8)':
     dependencies:
@@ -6543,8 +6540,6 @@ snapshots:
 
   ignore@7.0.6: {}
 
-  immer@11.1.16: {}
-
   immer@11.1.17: {}
 
   immutable@5.1.9: {}
@@ -7310,9 +7305,9 @@ snapshots:
       qrcode-generator: 2.0.4
       react: 19.2.8
 
-  react-querybuilder@8.22.5(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1):
+  react-querybuilder@8.23.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1):
     dependencies:
-      '@react-querybuilder/core': 8.22.5
+      '@react-querybuilder/core': 8.23.0
       '@reduxjs/toolkit': 2.12.0(react-redux@9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
       react: 19.2.8
       react-redux: 9.3.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
