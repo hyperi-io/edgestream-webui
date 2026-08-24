@@ -40,7 +40,7 @@ const InterfaceSettings: React.FC = () => {
     initialValues: {
       iface: '',
       family: 'ipv4',
-      mgmt_proto: 'static',
+      mgmt_proto: 'dhcp',
       ip_address: '',
       netmask: '',
       gateway: '',
@@ -48,7 +48,7 @@ const InterfaceSettings: React.FC = () => {
       use_management_interface_settings: true,
       events_iface: '',
       events_family: 'ipv4',
-      events_proto: 'static',
+      events_proto: 'dhcp',
       events_ip_address: '',
       events_netmask: '',
       events_gateway: '',
