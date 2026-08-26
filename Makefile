@@ -1,7 +1,7 @@
 PRODUCT      := edgestream-webui
 DEBEMAIL     := Hyperi <edgestream-support@hyperi.io>
 CONTENTS     := Hyperi - contact edgestream-support@hyperi.io for support enquiries
-BASE_VERSION := 0.0.1
+BASE_VERSION := 0.1.0
 
 # Get the exact tag on the current commit
 GIT_TAG := $(shell git describe --tags --exact-match 2>/dev/null)
@@ -20,12 +20,13 @@ DATE_YYYYMMDD := $(shell date -u -d @$(EPOCHSEC) +%Y%m%d)
 
 # --- VERSION LOGIC ---
 ifeq ($(GIT_TAG),)
-    # 1. No tag? Use the development string (0.0.1.gitYYYYMMDD.EPOCH)
+    # No tag -> Use the development string (BASE_VERSION.gitYYYYMMDD.EPOCH)
     VERSION := $(BASE_VERSION).git$(DATE_YYYYMMDD).$(EPOCHSEC)
 else
-    # 2. Tagged? Strip 'v' or 'dev-' prefixes for the internal Debian version
-    # Examples: 'v1.0.4' -> '1.0.4' | 'dev-1.0.4' -> '1.0.4'
-    VERSION := $(shell echo $(GIT_TAG) | sed -E 's/^(v|dev-)//')
+    # Tagged ->
+    #    - Strip 'v' or 'dev-' prefixes
+    #    - Convert separators before pre-release markers (rc, alpha, beta, preview) to Debian '~'
+    VERSION := $(shell echo $(GIT_TAG) | sed -E 's/^(v|dev-)//' | sed -E 's/[-.](rc|alpha|beta|preview)/~\1/g')
 endif
 
 # RFC2822 date for changelog
@@ -49,7 +50,7 @@ create_changelog:
 
 build_deb:
 	chmod +x "debian/rules"
-	# Pass current PATH and YARN into dpkg-buildpackage via debuild
+	# Pass current PATH and PNPM into dpkg-buildpackage via debuild
 	SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH) \
 	debuild --no-lintian -i -uc -us -b -j4 -ePNPM -ePATH
 
