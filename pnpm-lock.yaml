@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       '@auth0/auth0-react':
-        specifier: ^2.24.0
-        version: 2.24.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: ^2.24.1
+        version: 2.24.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.2.18)(react@19.2.8)
@@ -252,8 +252,8 @@ packages:
   '@auth0/auth0-auth-js@1.12.1':
     resolution: {integrity: sha512-YgYOAGmfwO40YOYkYSW7XvE6b+qkdlXdpzBshvOjCioygesUxIw2qRerilW1/8XQV41mnFvQIPnsTdEOHN9BeA==}
 
-  '@auth0/auth0-react@2.24.0':
-    resolution: {integrity: sha512-NnrjH5on3/IhBSCPkWFRGucqa00BA5HOba7Ye8G89f/43T4LtfsfQgZ1ZUhjdMt2vBb9g7nhiUS9KfJsOlnNiQ==}
+  '@auth0/auth0-react@2.24.1':
+    resolution: {integrity: sha512-K6ymu7g0OoulMllSx/VE+m9yNao8IEy1YzeIX8NnzveIbVvYd2j3+PB5zU3NHXCeMhtT9RYu7EDBxKR1E4+W0A==}
     peerDependencies:
       react: ^16.11.0 || ^17 || ^18 || ~19.0.1 || ~19.1.2 || ^19.2.1
       react-dom: ^16.11.0 || ^17 || ^18 || ~19.0.1 || ~19.1.2 || ^19.2.1
@@ -2729,8 +2729,8 @@ packages:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
 
-  jose@6.2.10:
-    resolution: {integrity: sha512-iiW7J9qRFlGxvCOIBDBDxFePQSn7ZMAnrYGhrrOo6siO/MIqwfyilLR27pkfDgUk+raLuzADS8A3S/KLBisc0g==}
+  jose@6.2.9:
+    resolution: {integrity: sha512-XrchZOFZUl/T3vTwRe8XK+cJrGtMF4th1ARnDfwbBXFKThGhlsxEE4Zu03AD/bjJSt/9jT/mxrOCkJWOg77aPA==}
 
   js-cookie@3.0.8:
     resolution: {integrity: sha512-yeJd4aNAdYZQjaon2bpD/Gb0B/omw7HQOsynXXcOiWVCacbBcPlgn8S/d1X6blFSaHao7ozqtW7NZW19xpCtIw==}
@@ -3129,8 +3129,8 @@ packages:
     resolution: {integrity: sha512-NzwMUB6C1D0+Kd+9iMS/H4k+Ck3cTX6Ckyfr/gAGlmvSE1LUQZnEZvWBi4PYmMwH/S5SMeTXnE+9uAz8uF+pWw==}
     engines: {node: '>=20'}
 
-  openid-client@6.8.7:
-    resolution: {integrity: sha512-gtKthNu7evSBvTdrrlHb4F3Fi9dcwlb5QaITlCs+9mfpvuOi0Q3qtBf5+iY4sEP8hy1qCoAdxBNPDcmZeVSDzQ==}
+  openid-client@6.8.6:
+    resolution: {integrity: sha512-lsfMRH/GCgMiGCRnBRY3e70uogkgOessPaTOhP3rw/dxqNOZHwOazWx+m6jt5EVk3ecRFULl0TwWpk9Qnw3RKQ==}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -4213,10 +4213,10 @@ snapshots:
 
   '@auth0/auth0-auth-js@1.12.1':
     dependencies:
-      jose: 6.2.10
-      openid-client: 6.8.7
+      jose: 6.2.9
+      openid-client: 6.8.6
 
-  '@auth0/auth0-react@2.24.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@auth0/auth0-react@2.24.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@auth0/auth0-spa-js': 2.24.1
       react: 19.2.8
@@ -6734,7 +6734,7 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  jose@6.2.10: {}
+  jose@6.2.9: {}
 
   js-cookie@3.0.8: {}
 
@@ -7102,9 +7102,9 @@ snapshots:
       powershell-utils: 0.2.0
       wsl-utils: 1.0.0
 
-  openid-client@6.8.7:
+  openid-client@6.8.6:
     dependencies:
-      jose: 6.2.10
+      jose: 6.2.9
       oauth4webapi: 3.8.7
 
   optionator@0.9.4:
