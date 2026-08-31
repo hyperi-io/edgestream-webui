@@ -71,7 +71,7 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@testing-library/jest-dom": "^7.0.1",
     "@types/lodash": "^4.17.25",
-    "@types/luxon": "^3.7.4",
+    "@types/luxon": "^3.7.5",
     "@types/node": "^26.2.0",
     "@types/qs": "^6.15.1",
     "@types/react": "^19.2.18",
