@@ -41,7 +41,7 @@
     "@tabler/icons-react": "^3.46.0",
     "@types/google-protobuf": "^3.15.12",
     "@uiw/react-textarea-code-editor": "^3.1.1",
-    "axios": "^1.19.0",
+    "axios": "^1.20.0",
     "date-fns": "^4.4.0",
     "dayjs": "^1.11.23",
     "eventemitter3": "^5.0.4",
