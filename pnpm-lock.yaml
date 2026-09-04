@@ -72,8 +72,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2
       grpc-web:
-        specifier: ^2.1.0
-        version: 2.1.0
+        specifier: ^2.1.1
+        version: 2.1.1
       js-file-download:
         specifier: ^0.4.12
         version: 0.4.12
@@ -91,7 +91,7 @@ importers:
         version: 8.0.1
       qs:
         specifier: ^6.15.3
-        version: 6.16.0
+        version: 6.15.3
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -2558,8 +2558,8 @@ packages:
     resolution: {integrity: sha512-FRWbddMxfkjiB7z+aQDWIR+E34xo9I8c9mtK2RPv8PmMzKRvrdsreHL/Ui/TmwHJfhHChEtsFPyMHKI+xuarQQ==}
     engines: {node: ^22.0.0 || ^24.0.0 || ^25.0.0 || >=26.0.0}
 
-  grpc-web@2.1.0:
-    resolution: {integrity: sha512-Y6h3J3KSfefew/dEYmIoWr0A2ukksKUu5w9HJ89VYrYlWgP7nCzD2K9yz4kxPTXC0r8Z2omZEamcugaVBmLirg==}
+  grpc-web@2.1.1:
+    resolution: {integrity: sha512-6Yxso4djycqREHvhCBGdcxxqhgEf2EYWa7QqQ07v4drZBHg/N9C3f27epjJYjl4KIsGpkB0g+wn9TrYepSC35Q==}
 
   has-bigints@1.1.0:
     resolution: {integrity: sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg==}
@@ -3416,8 +3416,8 @@ packages:
   qrcode-generator@2.0.4:
     resolution: {integrity: sha512-mZSiP6RnbHl4xL2Ap5HfkjLnmxfKcPWpWe/c+5XxCuetEenqmNFf1FH/ftXPCtFG5/TDobjsjz6sSNL0Sr8Z9g==}
 
-  qs@6.16.0:
-    resolution: {integrity: sha512-h6fhOIaRrID2CbEY2fqs+7t+UXZo+MLAnU5gRIq85uFtdiUPCdsApMlHhXogKVM4HM2DVbIjGNTTYH2OcmP1vA==}
+  qs@6.15.3:
+    resolution: {integrity: sha512-O9gl3zCl5h5blw1KGUzQKhA5oUXSl8rwUIM5o0S3nCXMliSvy5Dzx7/DJcI+SwgICv+IneSZwhBh1oSyEHA71A==}
     engines: {node: '>=0.6'}
 
   react-dom@19.2.8:
@@ -6588,7 +6588,7 @@ snapshots:
 
   graphql@17.0.2: {}
 
-  grpc-web@2.1.0: {}
+  grpc-web@2.1.1: {}
 
   has-bigints@1.1.0: {}
 
@@ -7432,7 +7432,7 @@ snapshots:
 
   qrcode-generator@2.0.4: {}
 
-  qs@6.16.0:
+  qs@6.15.3:
     dependencies:
       es-define-property: 1.0.1
       side-channel: 1.1.1
