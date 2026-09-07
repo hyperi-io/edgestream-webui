@@ -64,7 +64,7 @@
     "rehype-prism-plus": "^2.0.2",
     "styled-components": "^6.5.3",
     "yaml": "^2.9.0",
-    "zod": "^4.4.3"
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
