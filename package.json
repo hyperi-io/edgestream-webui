@@ -59,7 +59,7 @@
     "react-qr-code": "^2.2.0",
     "react-querybuilder": "8.23.1",
     "react-redux": "^9.3.0",
-    "react-router-dom": "^7.18.2",
+    "react-router-dom": "^7.18.3",
     "react-use": "^17.6.1",
     "rehype-prism-plus": "^2.0.2",
     "styled-components": "^6.5.3",
