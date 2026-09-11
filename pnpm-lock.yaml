@@ -5348,7 +5348,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
-      postcss: 8.5.28
+      postcss: 8.5.23
       tailwindcss: 4.3.3
 
   '@testing-library/dom@10.4.1':
