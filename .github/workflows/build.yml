@@ -96,6 +96,7 @@ jobs:
           repo-host: ${{ vars.EDGESTREAM_REPO_HOST }}
           incoming-path: ${{ vars.EDGESTREAM_REPO_INCOMING_PATH }}
           update-script: ${{ vars.EDGESTREAM_REPO_UPDATE_SCRIPT }}
+          sync-script: ''
 
       - name: Sync to R2
         if: success()
