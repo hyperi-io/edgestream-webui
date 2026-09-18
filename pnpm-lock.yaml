@@ -300,7 +300,7 @@ importers:
         specifier: ^6.35.1
         version: 6.35.1
       postcss:
-        specifier: ^8.5.28
+        specifier: ^8.5.19
         version: 8.5.28
       prettier:
         specifier: ^3.9.6
