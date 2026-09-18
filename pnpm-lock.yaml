@@ -264,8 +264,8 @@ importers:
         specifier: ^6.1.1
         version: 6.1.1(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
       '@vitest/ui':
-        specifier: ^4.1.10
-        version: 4.1.11(vitest@4.1.11)
+        specifier: ^5.0.0
+        version: 5.0.1(vitest@4.1.11)
       autoprefixer:
         specifier: ^10.5.6
         version: 10.5.6(postcss@8.5.28)
@@ -328,7 +328,7 @@ importers:
         version: 6.1.1(typescript@7.0.2)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
       vitest:
         specifier: ^4.1.10
-        version: 4.1.11(@types/node@26.5.1)(@vitest/ui@4.1.11)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
+        version: 4.1.11(@types/node@26.5.1)(@vitest/ui@5.0.1)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
       ws:
         specifier: ^8.21.3
         version: 8.21.3
@@ -1773,6 +1773,9 @@ packages:
   '@vitest/pretty-format@4.1.11':
     resolution: {integrity: sha512-yiZzPbGTS9Sr/JpFl8zHrcIkAofNbFV6k21vIgQN/cY/oxZeXhJv5sc/MBJ5jFKWmWs+oJHw0UXLZjmf931+Vw==}
 
+  '@vitest/pretty-format@5.0.1':
+    resolution: {integrity: sha512-6guWwj5d9bguuefTOvJoq387tfpkzSv554YdUEGzjJH2PnnmvzTLQ1UQSuAk5wBFVhf2CUmy/S/palOcb6dmpA==}
+
   '@vitest/runner@4.1.11':
     resolution: {integrity: sha512-LztvUgdwMNJMIkj3hQnnxiC2Xy1zNxq928W/xhjCLaNCzqTZOudjwbQf6v9IntZGPw132i2Lq2rgTRZHD3JHNw==}
 
@@ -1782,13 +1785,16 @@ packages:
   '@vitest/spy@4.1.11':
     resolution: {integrity: sha512-apNa/prQy2qCeywhnixOHPRCgGNhvg7T4Dapfl1GahLp/R+uhBm5cPyFoNVyqsNd2h1nJxL6BqqdIjiABL60YA==}
 
-  '@vitest/ui@4.1.11':
-    resolution: {integrity: sha512-r/rwyKoev21mWdRGSEkZOqkQ2BYy68mwjihg9M90nNRbf4NGrgzZ4cj6JNCEwlOGJkbKeMgsjlykvwKUbRr7gw==}
+  '@vitest/ui@5.0.1':
+    resolution: {integrity: sha512-7PvQu/X9/pQoHYfNLAYL22qsD4/+sx2k7zpUA7XvjW0sc40r3/r0lGZ2fsEyOHMuO8Q1KjiO1QQVjJdnWUy/WQ==}
     peerDependencies:
-      vitest: 4.1.11
+      vitest: 5.0.1
 
   '@vitest/utils@4.1.11':
     resolution: {integrity: sha512-zTCVGpyFsGWBhllOyKlTw/vnr6D9qxsfSDyfbyZmTyjHw5N/VuvzHpHoQjm2ZJzn4RJgx5w4r7V0er69CmLgPQ==}
+
+  '@vitest/utils@5.0.1':
+    resolution: {integrity: sha512-E9+yEA+jsfaoxZcUHFzEqUrQcoNh2EwrPT5efIqkUPUwD5Ua2Li9BRWaYeRwvzvdLgTSVrre8oKNeyrfg7KkdQ==}
 
   '@xobotyi/scrollbar-width@1.9.5':
     resolution: {integrity: sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==}
@@ -5286,7 +5292,7 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
     optionalDependencies:
-      vitest: 4.1.11(@types/node@26.5.1)(@vitest/ui@4.1.11)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
+      vitest: 4.1.11(@types/node@26.5.1)(@vitest/ui@5.0.1)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
 
   '@ts-jison/common@0.4.1-alpha.1': {}
 
@@ -5661,6 +5667,10 @@ snapshots:
     dependencies:
       tinyrainbow: 3.1.1
 
+  '@vitest/pretty-format@5.0.1':
+    dependencies:
+      tinyrainbow: 3.1.1
+
   '@vitest/runner@4.1.11':
     dependencies:
       '@vitest/utils': 4.1.11
@@ -5675,20 +5685,25 @@ snapshots:
 
   '@vitest/spy@4.1.11': {}
 
-  '@vitest/ui@4.1.11(vitest@4.1.11)':
+  '@vitest/ui@5.0.1(vitest@4.1.11)':
     dependencies:
-      '@vitest/utils': 4.1.11
+      '@vitest/utils': 5.0.1
       fflate: 0.8.3
       flatted: 3.4.4
       pathe: 2.0.3
       sirv: 3.0.2
-      tinyglobby: 0.2.17
       tinyrainbow: 3.1.1
-      vitest: 4.1.11(@types/node@26.5.1)(@vitest/ui@4.1.11)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
+      vitest: 4.1.11(@types/node@26.5.1)(@vitest/ui@5.0.1)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
 
   '@vitest/utils@4.1.11':
     dependencies:
       '@vitest/pretty-format': 4.1.11
+      convert-source-map: 2.0.0
+      tinyrainbow: 3.1.1
+
+  '@vitest/utils@5.0.1':
+    dependencies:
+      '@vitest/pretty-format': 5.0.1
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.1
 
@@ -8340,7 +8355,7 @@ snapshots:
       jiti: 2.7.0
       yaml: 2.9.0
 
-  vitest@4.1.11(@types/node@26.5.1)(@vitest/ui@4.1.11)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0)):
+  vitest@4.1.11(@types/node@26.5.1)(@vitest/ui@5.0.1)(jsdom@30.0.1)(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.11
       '@vitest/mocker': 4.1.11(vite@8.3.0(@types/node@26.5.1)(jiti@2.7.0)(yaml@2.9.0))
@@ -8364,7 +8379,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 26.5.1
-      '@vitest/ui': 4.1.11(vitest@4.1.11)
+      '@vitest/ui': 5.0.1(vitest@4.1.11)
       jsdom: 30.0.1
     transitivePeerDependencies:
       - msw
