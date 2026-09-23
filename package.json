@@ -57,9 +57,9 @@
     "react-dom": "^19.3.0",
     "react-lazylog": "^4.5.3",
     "react-qr-code": "^2.2.0",
-    "react-querybuilder": "8.23.1",
+    "react-querybuilder": "8.24.0",
     "react-redux": "^9.3.0",
-    "react-router-dom": "^7.18.2",
+    "react-router-dom": "^7.18.4",
     "react-use": "^17.6.1",
     "rehype-prism-plus": "^2.0.2",
     "styled-components": "^6.5.3",
@@ -99,7 +99,7 @@
     "typescript-eslint": "^8.67.0",
     "vite": "^8.3.0",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.1.10",
+    "vitest": "^5.0.1",
     "ws": "^8.21.3"
   },
   "browserslist": {
