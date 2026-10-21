@@ -41,14 +41,6 @@ function absolutizeUrls(config: RuntimeConfig) {
   if (config.VITE_APP_WS_API_URL?.startsWith("/")) {
     config.VITE_APP_WS_API_URL = `${origin}${config.VITE_APP_WS_API_URL}`;
   }
-  if (config.VITE_APP_GRAPHQL_API_URL?.startsWith("/")) {
-    config.VITE_APP_GRAPHQL_API_URL = `${origin}${config.VITE_APP_GRAPHQL_API_URL}`;
-  }
-  if (config.VITE_APP_GRAPHQL_WS_URL?.startsWith("/")) {
-    config.VITE_APP_GRAPHQL_WS_URL = `${
-      config.VITE_APP_GRAPHQL_WSS ? "wss" : "ws"
-    }://${host}${config.VITE_APP_GRAPHQL_WS_URL}`;
-  }
 }
 
 function hasRequiredConfig(config: RuntimeConfig): config is Required<
@@ -56,16 +48,12 @@ function hasRequiredConfig(config: RuntimeConfig): config is Required<
     RuntimeConfig,
     | "VITE_APP_REST_API_URL"
     | "VITE_APP_WS_API_URL"
-    | "VITE_APP_GRAPHQL_API_URL"
-    | "VITE_APP_GRAPHQL_WS_URL"
   >
 > &
   RuntimeConfig {
   return Boolean(
     config.VITE_APP_REST_API_URL &&
-      config.VITE_APP_WS_API_URL &&
-      config.VITE_APP_GRAPHQL_API_URL &&
-      config.VITE_APP_GRAPHQL_WS_URL
+      config.VITE_APP_WS_API_URL
   );
 }
 
@@ -100,10 +88,6 @@ function logMissing(config: RuntimeConfig) {
   console.log("VITE_APP_REST_API_URL=", config.VITE_APP_REST_API_URL);
   // eslint-disable-next-line no-console
   console.log("VITE_APP_WS_API_URL=", config.VITE_APP_WS_API_URL);
-  // eslint-disable-next-line no-console
-  console.log("VITE_APP_GRAPHQL_API_URL=", config.VITE_APP_GRAPHQL_API_URL);
-  // eslint-disable-next-line no-console
-  console.log("VITE_APP_GRAPHQL_WS_URL=", config.VITE_APP_GRAPHQL_WS_URL);
 }
 
 function renderApp(config: RuntimeConfig) {

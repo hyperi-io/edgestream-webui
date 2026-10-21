@@ -142,7 +142,7 @@ const CreateDrawer: React.FC<Props> = ({ open, onClose }) => {
   });
 
   return (
-    <Drawer opened={open} onClose={handleOnClose} position="right" size={600} title="Create Transform" padding="xl">
+    <Drawer opened={open} onClose={handleOnClose} position="right" size={600} title="Create Filter" padding="xl">
       <form onSubmit={handleSubmit}>
         <Stack gap="md">
           <Grid gap="sm" align="end">
