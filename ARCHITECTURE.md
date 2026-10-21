@@ -12,7 +12,6 @@ Browser
   v
 nginx (Gateway)
   |---- /api ------> EdgeStream API (FastAPI)
-  |---- /graphql --> GraphQL WebSocket service
   |---- /influx ---> InfluxDB UI (proxied)
 ```
 
@@ -32,10 +31,6 @@ nginx (Gateway)
 ### Queries & Mutations
 - HTTPS requests to `/api`
 - Apollo Client manages caching and state
-
-### Subscriptions
-- WebSocket connections to `/graphql`
-- Used for live metrics and event flow updates
 
 ---
 
