@@ -109,7 +109,7 @@ interface Props {
 
 const modeLabels: Record<string, string> = {
   query_builder: 'Query Builder',
-  vrl: 'Advanced Mode',
+  vrl: 'VRL Syntax',
 };
 
 const DetailsDrawer: React.FC<Props> = ({ transform, open, onClose }) => {
