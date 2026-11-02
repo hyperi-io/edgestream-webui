@@ -35,21 +35,22 @@ jobs:
       - name: Setup Build Environment
         uses: hyperi-io/edgestream-shared-workflows/setup-deps@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
 
-      - name: Install Node.js 22.x (Corepack included)
+      - name: Install Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
-          node-version: '26.x'
+          node-version: 22
           check-latest: true
 
-      - name: Enable Corepack and expose pnpm to debuild
+      - name: Install and expose pnpm to debuild
         run: |
           set -eu
-          corepack enable
-          corepack prepare --activate
+          # Install pnpm directly via npm (bypassing corepack completely)
+          npm install -g pnpm
 
           # Ensure node + pnpm are available at stable locations for debuild/dh
-          ln -sf "$(command -v node)"  /usr/bin/node
-          ln -sf "$(command -v pnpm)"  /usr/bin/pnpm
+          ln -sf "$(command -v node)" /usr/bin/node
+          ln -sf "$(command -v pnpm)" /usr/bin/pnpm
+
           pnpm -v
 
       # --- Check if the CI is healthy
