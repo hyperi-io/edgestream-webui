@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { sub } from 'date-fns';
 import { Group, Select, SegmentedControl, Switch, Stack } from '@mantine/core';
 import { DateTimePicker } from '@mantine/dates';
 
@@ -33,20 +34,27 @@ const PRESETS = [
 ];
 
 export const TimeRangeSelector: React.FC<Props> = ({
-  namePrefix,
-  timeRange,
-  setTimeRange,
-  scrolling,
-  setScrolling,
-}) => {
+                                                     namePrefix,
+                                                     timeRange,
+                                                     setTimeRange,
+                                                     scrolling,
+                                                     setScrolling,
+                                                   }) => {
   const handleModeChange = (value: 'preset' | 'custom') => {
     if (value === 'preset') {
       setTimeRange({ type: 'preset', value: '-5m' });
+      setScrolling(true);
     } else {
-      const nowIso = new Date().toISOString();
-      setTimeRange({ type: 'custom', start: nowIso, end: nowIso });
+      const now = new Date();
+      const pastHour = sub(now, { hours: 1 });
+      setTimeRange({
+        type: 'custom',
+        start: pastHour.toISOString(),
+        end: now.toISOString(),
+      });
+      setScrolling(false); // Disable auto-refresh during historical inspection
     }
-  };
+  };;
 
   const handlePresetChange = (value: string | null) => {
     if (!value) return;

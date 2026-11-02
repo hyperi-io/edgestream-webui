@@ -109,8 +109,15 @@ export function InfluxChart({
 
   const fetchData = useCallback(async (isMounted: () => boolean) => {
     const [start, end] = computeWindow();
+
+    // Guard: InfluxDB rejects ranges where start >= end
+    if (start.getTime() >= end.getTime()) {
+      return;
+    }
+
     const windowMs = end.getTime() - start.getTime();
-    const approxWidthMs = windowMs / 100;
+    // Ensure bucket window is at least 1 second
+    const approxWidthMs = Math.max(Math.round(windowMs / 100 / 1000), 1);
 
     const filters: string[] = [
       `|> filter(fn: (r) => r["_measurement"] =~ /${measurement}/)`
@@ -121,13 +128,13 @@ export function InfluxChart({
     if (componentIdRegex) filters.push(`|> filter(fn: (r) => r["component_id"] =~ /${componentIdRegex}/)`);
 
     const flux = `
-      from(bucket: "${bucket}")
-      |> range(start: ${start.toISOString()}, stop: ${end.toISOString()})
-      ${filters.join('\n')}
-      |> group(columns: ["_measurement", "component_id", "host"], mode: "by")
-      |> aggregateWindow(every: ${Math.round(approxWidthMs / 1000) || 1}s, fn: mean, createEmpty: true)
-      |> yield(name: "mean")
-    `;
+    from(bucket: "${bucket}")
+    |> range(start: ${start.toISOString()}, stop: ${end.toISOString()})
+    ${filters.join('\n')}
+    |> group(columns: ["_measurement", "component_id", "host"], mode: "by")
+    |> aggregateWindow(every: ${approxWidthMs}s, fn: mean, createEmpty: true)
+    |> yield(name: "mean")
+  `;
 
     const outMap: Record<string, Series> = {};
     const res: any[] = [];
