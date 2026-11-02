@@ -77,7 +77,11 @@ const CreateDrawer: React.FC<Props> = ({ open, onClose }) => {
     if (!selectedType || !configObject[selectedType]) {
       return { baseFields: [], tlsFields: [], optionalFields: [] };
     }
-    const { base = {}, optional = {}, tls = {} } = configObject[selectedType].settings;
+    const {
+      base = {},
+      optional = {},
+      tls = {},
+    } = configObject[selectedType].settings;
 
     // Provide the buckets to the utility so Select enums are populated
     const buckets = { certificateAuthority, certificate, privateKey };
@@ -87,27 +91,35 @@ const CreateDrawer: React.FC<Props> = ({ open, onClose }) => {
       tlsFields: buildFieldDefsFromSection(tls, buckets) || [],
       optionalFields: buildFieldDefsFromSection(optional, buckets) || [],
     };
-  }, [selectedType, configObject, certificate, certificateAuthority, privateKey]);
+  }, [
+    selectedType,
+    configObject,
+    certificate,
+    certificateAuthority,
+    privateKey,
+  ]);
 
   useUpdateEffect(() => {
     if (!selectedType) return;
     const template = configObject[selectedType];
     if (!template?.settings) return;
 
-    const initialValues: Record<string, any> = {
+    const nextValues: Record<string, any> = {
       name: form.values.name || '',
       enabled: form.values.enabled ?? true,
       type: selectedType,
     };
 
     const { base = {}, optional = {}, tls = {} } = template.settings;
-    [base, tls, optional].forEach(section => {
+    [base, tls, optional].forEach((section) => {
       Object.entries(section).forEach(([k, v]: [string, any]) => {
-        initialValues[k] = v.default !== undefined ? v.default : '';
+        nextValues[k] = v.default !== undefined ? v.default : '';
       });
     });
 
-    form.initialize(initialValues);
+    form.clearErrors();
+    form.setValues(nextValues);
+    form.resetDirty(nextValues);
   }, [selectedType]);
 
   const handleOnClose = useCallback(() => {
