@@ -1,5 +1,18 @@
 # EdgeStream Hub – WebUI
 
+[![EdgeStream Hub](https://img.shields.io/badge/Component_of-EdgeStream_Hub-38bdf8?style=flat-square)](https://hyperi-io.github.io/edgestream-hub/)
+[![Documentation](https://img.shields.io/badge/Docs-online-blue?style=flat-square)](https://hyperi-io.github.io/edgestream-hub/)
+
+> **Notice:** This repository contains an internal subsystem of the **[EdgeStream Hub](https://hyperi-io.github.io/edgestream-hub/)** enterprise telemetry pipeline appliance.
+>
+> EdgeStream Hub combines high-throughput data collectors, line-rate filtering, and multi-destination fanout into a unified Debian appliance. This service is provisioned, orchestrated, and managed as part of the core appliance stack.
+>
+> For full deployment options, source/destination setup, and administrative documentation, please refer to the primary site:
+>
+> 📖 **[https://hyperi-io.github.io/edgestream-hub](https://hyperi-io.github.io/edgestream-hub/)**
+
+---
+
 The **EdgeStream Hub WebUI** is the web-based management interface for **EdgeStream Hub**.
 It provides operators with a secure, modern UI for configuring, monitoring, and operating
 an EdgeStream deployment running on an appliance or edge node.
