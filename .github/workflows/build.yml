@@ -33,7 +33,7 @@ jobs:
 
       # --- Setup the environment
       - name: Setup Build Environment
-        uses: hyperi-io/edgestream-shared-workflows/setup-deps@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/setup-deps@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
 
       - name: Install Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
@@ -55,7 +55,7 @@ jobs:
 
       # --- Check if the CI is healthy
       - name: Lint Workflow
-        uses: hyperi-io/edgestream-shared-workflows/workflow-lint@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/workflow-lint@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
 
       - name: Dependency Review
         if: github.event_name == 'pull_request'
@@ -63,33 +63,33 @@ jobs:
 
       # --- Security Scans (Pre-Build) ---
       - name: Security - Gitleaks
-        uses: hyperi-io/edgestream-shared-workflows/gitleaks-scan@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/gitleaks-scan@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
         env:
           GIT_READY: "true"
           GIT_DIR: ${{ github.workspace }}/.git
           GIT_WORK_TREE: ${{ github.workspace }}
 
       - name: Security - Semgrep SAST
-        uses: hyperi-io/edgestream-shared-workflows/code-scan@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/code-scan@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
 
       - name: Prepare Build Workspace
-        uses: hyperi-io/edgestream-shared-workflows/prepare-env@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/prepare-env@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
 
       - name: Build Debian package
-        uses: hyperi-io/edgestream-shared-workflows/build-deb@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/build-deb@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
         env:
           NODE_PATH: /usr/bin/node
           PNPM_PATH: /usr/bin/pnpm
 
       # --- Security Scans (Post-Build) ---
       - name: Security - Trivy (Package Scan)
-        uses: hyperi-io/edgestream-shared-workflows/trivy-scan@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/trivy-scan@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
         with:
           scan-path: './dist'
 
       - name: Deploy Package
         if: success()
-        uses: hyperi-io/edgestream-shared-workflows/deploy-deb@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/deploy-deb@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
         with:
           ssh-key: ${{ secrets.EDGESTREAM_REPO_SSH_KEY }}
           known-hosts: ${{ secrets.EDGESTREAM_KNOWN_HOSTS }}
@@ -101,7 +101,7 @@ jobs:
 
       - name: Sync to R2
         if: success()
-        uses: hyperi-io/edgestream-shared-workflows/sync-repo-r2@a5a954ef42a21b7dcbdb729f089553b49eda70b6 # v0.0.11
+        uses: hyperi-io/edgestream-shared-workflows/sync-repo-r2@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
         with:
           ssh-key: ${{ secrets.EDGESTREAM_REPO_SSH_KEY }}
           known-hosts: ${{ secrets.EDGESTREAM_KNOWN_HOSTS }}
@@ -114,7 +114,7 @@ jobs:
 
       - name: Publish GitHub Release
         if: success()
-        uses: hyperi-io/edgestream-shared-workflows/release-deb@a5a954ef42a21b7dcbdb729f089553b49eda70b6
+        uses: hyperi-io/edgestream-shared-workflows/release-deb@fa6f9ffa084d2534d3c4cb24a1dbb7363d4d4403
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           package-path: 'dist/*.deb'
