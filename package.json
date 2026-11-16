@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@12.18.0",
+  "packageManager": "pnpm@12.21.0",
   "scripts": {
     "dev": "vite",
     "start": "vite",
@@ -49,7 +49,7 @@
     "js-file-download": "^0.4.12",
     "lodash": "^4.18.1",
     "luxon": "^3.7.2",
-    "mantine-datatable": "9.4.0",
+    "mantine-datatable": "9.8.1",
     "normalize.css": "^8.0.1",
     "qs": "^6.15.3",
     "react": "^19.3.0",
