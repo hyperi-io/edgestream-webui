@@ -16,7 +16,7 @@ import {
   buildFieldDefsFromSection,
 } from 'common/tlsCertificates';
 import FieldItemMantine, { FieldDef } from 'common/fieldItemMantine';
-import { useEffectOnce, useUnmount, useUpdateEffect } from 'react-use';
+import { useEffectOnce, useUpdateEffect } from 'react-use';
 import { useNotification } from 'common/useNotifications';
 import { isFieldVisible } from 'common/utils/drawerUtils';
 import {
@@ -104,23 +104,25 @@ const CreateDrawer: React.FC<Props> = ({ open, onClose }) => {
     const template = configObject[selectedType];
     if (!template?.settings) return;
 
-    const nextValues: Record<string, any> = {
-      name: form.values.name || '',
-      enabled: form.values.enabled ?? true,
-      type: selectedType,
-    };
-
-    const { base = {}, optional = {}, tls = {} } = template.settings;
-    [base, tls, optional].forEach((section) => {
-      Object.entries(section).forEach(([k, v]: [string, any]) => {
-        nextValues[k] = v.default !== undefined ? v.default : '';
-      });
-    });
-
     form.clearErrors();
-    form.setValues(nextValues);
-    form.resetDirty(nextValues);
-  }, [selectedType]);
+    form.setValues((prev) => {
+      const nextValues: Record<string, any> = {
+        name: prev.name || '',
+        enabled: prev.enabled ?? true,
+        type: selectedType,
+      };
+
+      const { base = {}, optional = {}, tls = {} } = template.settings;
+      [base, tls, optional].forEach((section) => {
+        Object.entries(section).forEach(([k, v]: [string, any]) => {
+          nextValues[k] = v.default !== undefined ? v.default : '';
+        });
+      });
+
+      form.resetDirty(nextValues);
+      return nextValues;
+    });
+  }, [selectedType, configObject]);
 
   const handleOnClose = useCallback(() => {
     form.reset();
@@ -150,8 +152,6 @@ const CreateDrawer: React.FC<Props> = ({ open, onClose }) => {
     getSourceTemplate();
     getCertificates();
   });
-
-  useUnmount(() => { handleOnClose(); });
 
   const renderFieldList = (fields: FieldDef[]) =>
     fields
